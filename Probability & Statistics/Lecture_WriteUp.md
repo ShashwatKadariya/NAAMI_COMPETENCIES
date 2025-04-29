@@ -30,6 +30,90 @@ Each RV is associated with a distribution:
   f(x) such that P(a ≤ X ≤ b) = ∫[a to b] f(x) dx
   ```
 
+## 📊 Types of Probability Distributions
+
+In machine learning and statistics, different types of distributions model different kinds of data. Distributions can be broadly categorized into **discrete** and **continuous** types.
+
+---
+
+### 🔢 Discrete Distributions
+
+#### 1. **Bernoulli Distribution**
+
+- Models: A single trial with two outcomes (e.g., success/failure)
+- Parameter: \( p \in [0, 1] \)
+- PMF:
+  ```
+  P(X = x) = p^x (1 - p)^{1 - x}, where x ∈ {0,1}
+  ```
+- Example: Coin toss
+
+#### 2. **Binomial Distribution**
+
+- Models: Number of successes in \( n \) independent Bernoulli trials
+- Parameters: \( n \) (number of trials), \( p \) (success probability)
+- PMF:
+  ```
+  P(X = k) = C(n, k) * p^k * (1 - p)^{n - k}
+  ```
+- Example: Number of heads in 10 coin tosses
+
+#### 3. **Poisson Distribution**
+
+- Models: Number of events in a fixed interval of time/space
+- Parameter: \( \lambda \) (average rate)
+- PMF:
+  ```
+  P(X = k) = (λ^k * e^{-λ}) / k!
+  ```
+- Example: Number of emails received per hour
+
+---
+
+### 📈 Continuous Distributions
+
+#### 4. **Uniform Distribution (Continuous)**
+
+- Models: All outcomes are equally likely within an interval \([a, b]\)
+- PDF:
+  ```
+  f(x) = 1 / (b - a), for x in [a, b]
+  ```
+- Example: Random number between 0 and 1
+
+#### 5. **Normal (Gaussian) Distribution**
+
+- Models: Symmetric, bell-shaped distribution around a mean
+- Parameters: \( \mu \) (mean), \( \sigma^2 \) (variance)
+- PDF:
+  ```
+  f(x) = (1 / √(2πσ²)) * exp(- (x - μ)² / (2σ²))
+  ```
+- Example: Height, exam scores
+
+#### 6. **Exponential Distribution**
+
+- Models: Time between events in a Poisson process
+- Parameter: \( \lambda \)
+- PDF:
+  ```
+  f(x) = λ * e^{-λx}, for x ≥ 0
+  ```
+- Example: Time between arrivals at a bus stop
+
+---
+
+### Summary Table
+
+| Distribution | Type       | Use Case                         | Parameters          |
+| ------------ | ---------- | -------------------------------- | ------------------- |
+| Bernoulli    | Discrete   | Binary outcomes                  | \( p \)             |
+| Binomial     | Discrete   | Number of successes              | \( n, p \)          |
+| Poisson      | Discrete   | Count events over time           | \( \lambda \)       |
+| Uniform      | Continuous | Equal likelihood over interval   | \( a, b \)          |
+| Normal       | Continuous | Natural phenomena, central limit | \( \mu, \sigma^2 \) |
+| Exponential  | Continuous | Time until event                 | \( \lambda \)       |
+
 ---
 
 ## Joint Distribution
