@@ -60,10 +60,5 @@ The surprising result:
 
 ## Conclusion
 
-Each die beats the next with probability 2/3:
-
-\[
-A \succ B,\quad B \succ C,\quad C \succ D,\quad D \succ A
-\]
-
-This violates transitivity and shows a classic **probabilistic cycle**, useful in **game theory** and **counter-intuition** examples.
+Each die beats the next with probability 2/3 and hence the dominance is non-transitive.
+This violates intuitive transitivity (if A > B and B > C, then A > C), making it a powerful illustration in probability and game theory.
